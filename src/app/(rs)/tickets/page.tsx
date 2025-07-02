@@ -1,6 +1,9 @@
+import { Metadata } from "next";
 import React from "react";
 
-// import { Container } from './styles';
+export const metadata: Metadata = {
+  title: "Tickets",
+};
 
 const Tickets: React.FC = () => {
   return (
