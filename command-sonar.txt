@@ -1,0 +1,1 @@
+docker container run --rm --network=host -e SONAR_HOST_URl="http://localhost:9000" -v "./scr:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=repairshop -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_3e1f9d35dce9e825ea2891d75f6cfcdebfb0b094
