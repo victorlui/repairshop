@@ -11,11 +11,7 @@ export const insertCustomerSchema = createInsertSchema(customers, {
   email: (schema) => schema.email("E-mail inválido"),
   zip: (schema) =>
     schema.regex(/^\d{5}\d{3}$/, "CEP inválido. Use o formato 00000000"),
-  phone: (schema) =>
-    schema.regex(
-      /^\(?\d{2}\)?\s?\d{5}-\d{4}$/,
-      "Celular inválido. Use o formato (XX) XXXXX-XXXX"
-    ),
+  phone: (schema) => schema.min(1, "Celular é obrigatório"),
 });
 
 export const selectCustomerSchema = createSelectSchema(customers);

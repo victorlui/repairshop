@@ -84,6 +84,7 @@ export default async function TicketFormPage({
         const techs = users
           ? users.map((user) => ({ id: user.email!, description: user.email! }))
           : [];
+
         return <TicketForm customer={customer} techs={techs} />;
       } else {
         return <TicketForm customer={customer} />;
@@ -115,6 +116,7 @@ export default async function TicketFormPage({
       } else {
         const isEditable =
           user?.email?.toLowerCase() === ticket.tech.toLowerCase();
+
         return (
           <TicketForm
             customer={customer}
